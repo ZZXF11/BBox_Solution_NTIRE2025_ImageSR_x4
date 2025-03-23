@@ -4,17 +4,22 @@
 ## How to test the team15 model?
 ### step1: load docker image
 docker load --input bbox.tar
- (baidu cloud: https://pan.baidu.com/s/1lE0eDndu55Z5rmUqF_d6Kg?pwd=r6ji passwd: r6ji )
+ [BaiduYun:r6ji](https://pan.baidu.com/s/1lE0eDndu55Z5rmUqF_d6Kg?pwd=r6ji)
 
 ### step2: download the pretrained model
 The pretrained models are available at Google Drive or Baidu Netdisk (access code: qyrl).
 
 
 ### step3: inference
-torchrun --nproc_per_node=10 test.py --model_id 15 --test_dir /NTIRE2025_SR_Challenge/DIV2K_test_LR --save_dir
+1. For single GPU:
+```bash
+CUDA_VISIBLE_DEVICES=<gpu_id> torchrun --nproc_per_node=1 test.py --model_id 15 test_dir [path to test data dir] --save_dir [path to your save dir]
+```
+
+2. For multi-GPU:
 
 ```bash
-    torchrun --nproc_per_node=10 test.py --model_id 15 test_dir [path to test data dir] --save_dir [path to your save dir]
+CUDA_VISIBLE_DEVICES=<gpu_ids> torchrun --nproc_per_node=<num_gpus> test.py --model_id 15 test_dir [path to test data dir] --save_dir [path to your save dir]
 ```
 
 If you are using a different number or type of GPUs, please adjust the `nproc_per_node` parameter accordingly to match your hardware configuration.
