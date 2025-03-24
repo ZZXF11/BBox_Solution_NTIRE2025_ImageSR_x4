@@ -1,6 +1,6 @@
 # [NTIRE 2025 Challenge on Image Super-Resolution (x4)](https://cvlai.net/ntire/2025/) @ [CVPR 2025](https://cvpr.thecvf.com/) -[BBox Team 15]
 
-The souce files of factsheet are available at `factsheet/BBox-NTIRE 2025 Image Super-Resolution Challenge Factsheet.zip`
+The souce files of the factsheet are available at `factsheet/BBox-NTIRE 2025 Image Super-Resolution Challenge Factsheet.zip`
 
 ## How to test the team15 model?
 ### step1: load docker image

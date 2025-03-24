@@ -9,7 +9,7 @@
 *.gif
 *.pth
 *.dat
-*.zip
+# *.zip
 
 # template
 
