@@ -1,17 +1,17 @@
 # [NTIRE 2025 Challenge on Image Super-Resolution (x4)](https://cvlai.net/ntire/2025/) @ [CVPR 2025](https://cvpr.thecvf.com/) -[BBox Team 15]
 
-The souce files of the factsheet are available at `factsheet/BBox-NTIRE 2025 Image Super-Resolution Challenge Factsheet.zip`
+The souce files of the factsheet are available at `factsheet`.
 
 ## How to test the team15 model?
-### step1: load docker image
+### Step1: load docker image
 docker load --input bbox.tar
  [BaiduYun:r6ji](https://pan.baidu.com/s/1lE0eDndu55Z5rmUqF_d6Kg?pwd=r6ji)
 
-### step2: download the pretrained model
-The pretrained models are available at `model_zoo/team15_SMT/team15_SMT_HAT.txt` and `model_zoo/team15_SMT/team15_SMT_Mamba.txt`.
+### Step2: download the pretrained model
+- The pretrained models are available at `model_zoo/team15_SMT/team15_SMT_HAT.txt` and `model_zoo/team15_SMT/team15_SMT_Mamba.txt`.
+- Download the two pretrained models and put them into `model_zoo`.
 
-
-### step3: inference
+### Step3: inference
 1. For single GPU:
 ```bash
 CUDA_VISIBLE_DEVICES=<gpu_id> torchrun --nproc_per_node=1 test.py --model_id 15 test_dir [path to test data dir] --save_dir [path to your save dir]
