@@ -25,4 +25,4 @@ CUDA_VISIBLE_DEVICES=<gpu_ids> torchrun --nproc_per_node=<num_gpus> test.py --mo
 
 If you are using a different number or type of GPUs, please adjust the `nproc_per_node` parameter accordingly to match your hardware configuration.
 
-**Note:🚨** We use **10× A100 GPUs** for inference, which takes approximately **40 minutes**. The extended inference time is due to the **multi-window self-ensemble strategy** applied to two models, along with the final **model ensemble integration**.  
+**Note:🚨** Inference speed on a single GPU will be relatively slow. Specifically, we use **10× A100 GPUs** for inference, which takes approximately **40 minutes**. The extended inference time is due to the **multi-window self-ensemble strategy** applied to two models, along with the final **model ensemble integration**.  
